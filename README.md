@@ -22,15 +22,15 @@ README.md → Documentation
    git clone https://github.com/<your-username>/char_driver_repo.git
    cd char_driver_repo
 
-    Build the driver:
-
-make
+Build the driver:
+   ```bash
+   make
 
 This will generate char_driver.ko in the bin/ folder.
 
 Insert the module:
-
-sudo insmod bin/char_driver.ko
+   ```bash
+   sudo insmod bin/char_driver.ko
 
 write operation : echo "Hello" > ./dev/char_driver
 read operation : cat /dev/char_driver
@@ -38,8 +38,8 @@ read operation : cat /dev/char_driver
 ## 🧪 Testing
 
 Run the Python test script:
-
-python3 tests/test_driver.py
+   ```bash
+   python3 tests/test_driver.py
 
 Expected output:
 
@@ -51,5 +51,5 @@ Device test complete!
 ## 🧹 Clean Up
 
 To remove build files:
-
+   ```bash
     make clean
