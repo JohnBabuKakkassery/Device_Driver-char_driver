@@ -1,4 +1,4 @@
-# Simple Linux Character Driver
+# Linux Character Driver
 
 This repository contains a simple Linux kernel **character driver** written in C, along with a user-space Python test script. It serves as a practical demonstration of how to write, build, and test a basic Linux device driver.
 
