@@ -7,18 +7,11 @@ It demonstrates how to write, build, and test a basic Linux device driver.
 
 ## 📂 Repository Structure
 
-char_driver/
-│
-├── source/
-│   └── char_driver.c
-│
-├── tests/
-│   └── test_driver.py
-│
-├── bin/               # Generated on build (contains .o and .ko files)
-│
-├── Makefile
-└── README.md
+source/ → Driver source code (char_driver.c)
+tests/ → User-space test script (Python)
+bin/ → Build output (.o and .ko files, created after make)
+Makefile → Build rules
+README.md → Documentation
 
 ---
 
@@ -58,3 +51,5 @@ Device test complete!
 ## 🧹 Clean Up
 
 To remove build files:
+
+    make clean
