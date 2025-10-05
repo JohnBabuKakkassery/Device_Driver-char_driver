@@ -39,18 +39,19 @@ cd char_driver_repo
 2. Build the Driver
 
 Use the provided Makefile to compile the module:
-Bash
 
-make
+  ```bash
+  make
+  ```
 
 This command compiles the source code and generates the kernel object file, char_driver.ko, inside the bin/ folder.
 
 3. Insert the Module
 
 Load the compiled kernel module into the Linux kernel using insmod:
-Bash
-
+```bash
 sudo insmod bin/char_driver.ko
+```
 
 Once loaded, the device file should be available at /dev/char_driver.
 
@@ -58,8 +59,14 @@ Once loaded, the device file should be available at /dev/char_driver.
 
 You can test the driver's core functionality directly using standard shell commands:
 Operation	Command	Description
-Write	echo "Hello" > /dev/char_driver	Writes a string to the device driver.
-Read	cat /dev/char_driver	Reads the internal buffer content from the driver.
+Write	
+```bash
+echo "Hello" > /dev/char_driver	Writes a string to the device driver.
+```
+Read	
+```bash
+cat /dev/char_driver	Reads the internal buffer content from the driver.
+```
 
 🧪 Testing
 
@@ -68,9 +75,10 @@ The included Python script provides a robust test of the driver's read and write
 Run the Test Script
 
 Execute the script from the root of the repository:
-Bash
-
-python3 tests/test_driver.py
+  
+  ```bash
+  python3 tests/test_driver.py
+  ```
 
 Expected Output
 
@@ -86,13 +94,13 @@ Device test complete!
 1. Remove the Module
 
 To unload the driver from the kernel:
-Bash
-
+```bash
 sudo rmmod char_driver
+```
 
 2. Remove Build Files
 
 To remove all generated build files (.o, .ko, module information, etc.), use the clean target in the Makefile:
-Bash
-
+```bash
 make clean
+```
