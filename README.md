@@ -34,6 +34,7 @@ First, clone the repository and navigate into the directory:
 ```bash
 git clone [https://github.com/](https://github.com/)<your-username>/char_driver_repo.git
 cd char_driver_repo
+```
 
 2. Build the Driver
 
